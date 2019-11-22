@@ -1,8 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Quran from '../views/Quran.vue'
 import Layout from '../layouts/main.vue'
+
+// Quran //
+import Quran from '../views/Quran/Index.vue'
+import Read from '../views/Quran/Read.vue'
+import Surah from '../views/Quran/Surah.vue'
+// Quran //
 Vue.use(VueRouter)
 
 const routes = [
@@ -18,8 +23,20 @@ const routes = [
       },
       {
         path:'/quran',
-        name:'quran',
-        component:Quran
+        component:Quran,
+        children:
+        [
+          {
+            path:'/quran',
+            name:'quran_surah',
+            component:Surah
+          },
+          {
+            path:'/quran/read/:id',
+            name:'read_surah',
+            component: Read
+          }
+        ]
       }
     ]
   },

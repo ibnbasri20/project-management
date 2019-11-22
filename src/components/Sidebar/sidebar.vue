@@ -7,13 +7,18 @@
                 </router-link>
             </li>
             <li>
-                <router-link to="/profile">
+                <router-link to="/#profile">
                     <i class="fa fa-user"></i>
                 </router-link>
             </li>
             <li>
                 <router-link to="/quran">
                     <i class="fa fa-quran"></i>
+                </router-link>
+            </li>
+            <li>
+                <router-link to="/#5125">
+                    <i class="fa fa-cube"></i>
                 </router-link>
             </li>
         </ul>
